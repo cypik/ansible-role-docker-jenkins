@@ -69,7 +69,7 @@ Smaller roles are created for each environment elements; which also include task
 ```
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/cypik/ansible-role-jenkins/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/cypik/ansible-role-docker-jenkins/blob/master/LICENSE) file for details.
 
 
 ## Installation
