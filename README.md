@@ -20,7 +20,7 @@ Smaller roles are created for each environment elements; which also include task
 
 
 ## Table of Contents
-- [Example Playbook](#Example Playbook)
+- [Example Playbook](#Example-Playbook)
 - [Variables](#Variables)
 - [License](#license)
 
