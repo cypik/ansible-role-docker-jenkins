@@ -3,6 +3,7 @@
 set -eux -o pipefail
 
 # pull the image before so we dont first remove the container and then pull
+
 docker pull jenkins/jenkins:{{ jenkins_version }}
 
 docker rm -f -v jenkins || :
@@ -14,4 +15,4 @@ docker run -u root --net=host --rm --name jenkins \
    -v "{{ jenkins_config_dir }}":/root/config \
    -v "{{ jenkins_tmp_dir }}":/tmp/jenkins \
    -v /var/run/docker.sock:/var/run/docker.sock \
-     jenkins/jenkins:{{ jenkins_version }}
+      jenkins/jenkins:{{ jenkins_version }}
