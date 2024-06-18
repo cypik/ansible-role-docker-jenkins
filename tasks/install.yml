@@ -15,11 +15,41 @@
     mode: 0755
     owner: root
     group: root
+#
+#- name: Update package lists
+#  apt:
+#    update_cache: yes
+
+- name: Remove conflicting Docker GPG key file
+  file:
+    path: /etc/apt/keyrings/docker.gpg
+    state: absent
+
+- name: Add GPG key for Jenkins repository
+  shell: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5BA31D57EF5975CA
+
+- name: Update package lists
+  shell: sudo apt update
+
+
+- name: Install containerd
+  apt:
+    name: containerd
+    state: present
+
+
+- name: Update containerd
+  apt:
+    name: containerd
+    state: latest
+  ignore_errors: yes
+
 
 - name: Install Docker
   apt:
     name: docker.io
     state: present
+
 
 - name: Start Docker service
   service:
