@@ -5,7 +5,7 @@ dependencies: []
 galaxy_info:
   author: Sohan yadav
   description: This ansible role is used to install Jenkins with docker on server.
-  company: "cypik Inc."
+  company: "cypik"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
